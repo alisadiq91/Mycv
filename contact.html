@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="stylesheet" href="Assets/css/style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_VTMnEhRsonpEtDwJFs1O2");
+    
+
+   })();
+</script>
     
     <title>Rosie</title>
     
@@ -50,9 +60,9 @@
             <h4 class="contact-heading uppercase text-center">Got A Project In Mind?</h4>
             <h5 class="uppercase text-center">Let's Work Together!</h5>
             <div class="center-form">
-                <form>
+                <form onsubmit="return sendMail(this);">
                 <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
-                <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" required />
+                <input type="email" name="emailaddress" id="emailaddress" class="form-control" placeholder="Email" required />
                 <textarea name="projectsummary" id="projectsummary" placeholder="Explain here why you deserve me" rows="5" class="form-control"></textarea>
                 <div class="form-row text-center">
                     <div class="col">
@@ -133,5 +143,6 @@
     
     </div>
 </footer>
+<script src = "Assets/js/sendemail.js"></script>
 </body>
 </html>
